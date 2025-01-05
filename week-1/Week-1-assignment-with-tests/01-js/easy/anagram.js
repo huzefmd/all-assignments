@@ -6,8 +6,35 @@
   Once you've implemented the logic, test your code by running
   - `npm run test-anagram`
 */
-
 function isAnagram(str1, str2) {
+
+  // let str1Arr = str1.toLowerCase().split('');
+  // let str2Arr = str2.toLowerCase().split('');
+  // if(str1.length != str2.length) {
+  //     return false;
+  // }
+  // for (let val of str1Arr) {
+  //     if (str2Arr.indexOf(val) == -1) {
+  //         return false;
+  //     }
+  // }
+  // return true;
+
+  let str1arr=str1.toLowerCase().split(' ');
+  let str2arr=str2.toLowerCase().split(' ');
+  if (str1.length!=str2.length){
+    return false;
+
+  }
+  for(let val of str1arr){
+    if (str2arr.indexOf(val)==-1){
+      return false;
+    }
+    return true;
+  }
+
+
+
 
 }
 
